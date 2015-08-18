@@ -9,3 +9,7 @@ autopublish
 insecure
 iron:router
 fourseven:scss
+aramk:tinycolor
+cfs:standard-packages
+cfs:filesystem
+benan789:color-thief

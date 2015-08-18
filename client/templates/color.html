@@ -1,0 +1,44 @@
+<template name="color">
+  <form action="">
+    <input type="color" value="#FD0000">
+    <input class="hidden-text" type="text">
+    <input type="file">
+  </form>
+
+  <img id="js-img" class="js-img" width="300" src="{{image.url}}" alt="">
+
+
+  <section class="output-colors">
+    <p>Original Color: <span class="js-orig-color"></span></p>
+    <p>Is Light: <span class="js-is-light"></span></p>
+    <p>Is Dark: <span class="js-is-dark"></span></p>
+    <p>Analogous:
+      <div class="js-analogous">
+      </div>
+    </p>
+
+    <p>Monochromatic:
+      <div class="js-mono">
+      </div>
+    </p>
+
+    <p>Splitcomplement:
+      <div class="js-splitcomp">
+      </div>
+    </p>
+
+    <p>Triad:
+      <div class="js-triad">
+      </div>
+    </p>
+
+    <p>Tetrad:
+      <div class="js-tetrad">
+      </div>
+    </p>
+
+    <p>Complementary: <span class="js-complementary"></span><div class="tile js-complementary-tile"></div></p>
+  </section>
+
+
+</template>
