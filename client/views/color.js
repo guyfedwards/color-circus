@@ -1,6 +1,10 @@
 Template.color.events({
   'change input[type=color]': function (e) {
     var color = $(e.target).val();
+    $('.hidden-text').val(color).trigger('input');
+  },
+  'input .hidden-text': function (e) {
+    var color = $(e.target).val();
     var specialColor = tinycolor(color);
     var analogous = specialColor.analogous().map(function (t) {return t.toHexString()});
     var monochromatic = specialColor.monochromatic().map(function (t) {return t.toHexString()});
@@ -59,10 +63,14 @@ Template.color.events({
         var image = new Image;
         image.src = imgSrc;
         var colorThief = new ColorThief.colorRob();
+        var dominantColor = rgbify(colorThief.getColor(image));
+        var dominantColorHex = tinycolor(dominantColor).toHexString();
 
-        //$('input[type=color]').setAttribute('value', 'rgb=
-          //console.log(colorThief.getColor(image));
-          //console.log(colorThief.getPalette(image));
+        function rgbify (colorArr) {
+          return 'rgb(' + colorArr[0] + ',' + colorArr[1] + ',' + colorArr[2] + ')';
+        }
+
+        $('.hidden-text').val(dominantColorHex).trigger('input');
   }
 });
 
