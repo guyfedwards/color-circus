@@ -1,50 +1,69 @@
 <template name="color">
-  <form action="">
+  <form action="" class="u-text-center">
     <input type="color" value="#FD0000">
     <input class="hidden-text" type="text">
     <input type="file">
   </form>
 
-  <img id="js-img" class="js-img" width="300" src="{{image.url}}" alt="">
+  <div class="preview-pane u-text-center">
+    <img id="js-img" class="js-img" width="300" src="{{image.url}}" alt="">
+  </div>
 
 
+  {{#if showOutput}}
   <section class="output-colors">
-    <p>Original Color: <span class="js-orig-color"></span></p>
-    <p>Is Light: <span class="js-is-light"></span></p>
-    <p>Is Dark: <span class="js-is-dark"></span></p>
-    <div class="tile-set">Analogous:
-      <div class="js-analogous">
+    <p>This color is considered <strong>{{lightOrDark}}</strong></p>
+
+    {{#if palette}}
+      <div class="tile-set">
+        <p><strong>Palette:</strong></p>
+        {{#each palette}}
+          {{> tile}}
+        {{/each}}
       </div>
+    {{/if}}
+
+    <div class="tile-set">
+    <p><strong>Analogous:</strong></p>
+      {{#each analogous}}
+        {{> tile}}
+      {{/each}}
     </div>
 
-    <div class="tile-set">Monochromatic:
-      <div class="js-mono">
-      </div>
+    <div class="tile-set">
+      <p><strong>Monochromatic:</strong></p>
+      {{#each monochromatic}}
+        {{> tile}}
+      {{/each}}
     </div>
 
-    <div class="tile-set">Splitcomplement:
-      <div class="js-splitcomp">
-      </div>
+    <div class="tile-set">
+      <p><strong>Splitcomplement:</strong></p>
+      {{#each splitComp}}
+        {{> tile}}
+      {{/each}}
     </div>
 
-    <div class="tile-set">Triad:
-      <div class="js-triad">
-      </div>
+    <div class="tile-set">
+      <p><strong>Triad:</strong></p>
+      {{#each triad}}
+        {{> tile}}
+      {{/each}}
     </div>
 
-    <div class="tile-set">Tetrad:
-      <div class="js-tetrad">
-      </div>
+    <div class="tile-set">
+      <p><strong>Tetrad:</strong></p>
+      {{#each tetrad}}
+        {{> tile}}
+      {{/each}}
     </div>
 
-    <div class="tile-set">Complementary:
-      <div>
-        <div class="tile js-complementary-tile">
-          <span class="js-complementary tile-hex"></span>
-        </div>
-      </div>
+    <div class="tile-set">
+      <p><strong>Complementary:</strong></p>
+      {{> tile complementary}}
     </div>
   </section>
+  {{/if}}
 
 
 </template>
