@@ -1,0 +1,46 @@
+// helpers.scss
+// ====================================================
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.u-visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+
+// floats
+.u-float-right {
+  float: right;
+}
+
+.u-float-left {
+  float: left;
+}
+
+
+// text alignment
+.u-text-left {
+  text-align: left;
+}
+
+.u-text-center {
+  text-align: center;
+}
+
+.u-text-right {
+  text-align: right;
+}
+
+
+// display
+.u-hidden-mobile {
+  @include at-query($max, $tablet) {
+    display: none;
+  }
+}

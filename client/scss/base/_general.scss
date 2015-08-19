@@ -1,0 +1,12 @@
+// general.scss
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+
+.main {
+  max-width: 700px;
+  margin: 0 auto;
+}

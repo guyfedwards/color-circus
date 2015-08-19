@@ -1,0 +1,26 @@
+// variables.scss
+// ==================================================
+
+
+// grid vars
+// ====================================================
+
+$viewport-increment: 0.1px; // customize to suite
+
+// desktop
+$desktop: 1024px; // customize to suite
+$pre-desktop: $desktop - $viewport-increment;
+
+// tablet
+$tablet: 768px; // customize to suite
+$pre-tablet: $tablet - $viewport-increment;
+
+// palm
+$palm: 640px; // customize to suite
+$post-palm: $palm + $viewport-increment;
+
+// constraints
+$min: min-width;
+$max: max-width;
+
+

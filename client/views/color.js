@@ -28,23 +28,23 @@ Template.color.events({
 
 
     for (var i = 0; i < analogous.length; i += 1) {
-      $('.js-analogous').append('<span>' + analogous[i] + '<div class="tile" style="background-color: ' + analogous[i] + '"></div>');
+      $('.js-analogous').append('<div class="tile" style="background-color: ' + analogous[i] + '">' + '<span>' + analogous[i] + '</span></div>');
     }
 
     for (var i = 0; i < monochromatic.length; i += 1) {
-      $('.js-mono').append('<span>' + monochromatic[i] + '<div class="tile" style="background-color: ' + monochromatic[i] + '"></div>');
+      $('.js-mono').append('<div class="tile" style="background-color: ' + monochromatic[i] + '">' + '<span>' + monochromatic[i] + '</span></div>');
     }
 
     for (var i = 0; i < splitComp.length; i += 1) {
-      $('.js-splitcomp').append('<span>' + splitComp[i] + '<div class="tile" style="background-color: ' + splitComp[i] + '"></div>');
+      $('.js-splitcomp').append('<div class="tile" style="background-color: ' + splitComp[i] + '">' + '<span>' + splitComp[i] + '</span></div>');
     }
 
     for (var i = 0; i < triad.length; i += 1) {
-      $('.js-triad').append('<span>' + triad[i] + '<div class="tile" style="background-color: ' + triad[i] + '"></div>');
+      $('.js-triad').append('<div class="tile" style="background-color: ' + triad[i] + '">' + '<span>' + triad[i] + '</span></div>');
     }
 
     for (var i = 0; i < tetrad.length; i += 1) {
-      $('.js-tetrad').append('<span>' + tetrad[i] + '<div class="tile" style="background-color: ' + tetrad[i] + '"></div>');
+      $('.js-tetrad').append('<div class="tile" style="background-color: ' + tetrad[i] + '">' + '<span>' + tetrad[i] + '</span></div>');
     }
   },
   'change input[type=file]': function (event, template) {
